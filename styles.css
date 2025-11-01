@@ -1,0 +1,173 @@
+/* Base styles for mobile */
+body {
+  font-size: 16px;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('myFont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Layout */
+.layout {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #9b82b6;
+  flex-direction: column;
+  background-color: #9b82b6;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* 💜 Titles */
+.maintitle {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  padding: 20px; /* added padding value */
+  color: white;
+  transition: all 0.4s ease;
+}
+
+
+.title2 {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 0px;
+  transition: all 0.4s ease;
+  position: relative;
+  top: 0;
+}
+
+.title:hover {
+  background: rgba(221, 176, 230, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ddb0e6;
+  color: #ddb0e6;
+  font-size: 50px;
+}
+
+.love-list {
+  border: 3px solid #ddb0e6;
+  border-radius: 20px;
+  padding: 30px 50px;
+  width: 1300px;
+  margin: 40px auto; /* Centers horizontally */
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  box-shadow: 0 0 15px rgba(221, 176, 230, 0.5);
+  display: inline-block;
+  transform-origin: center; /* keeps scaling centered */
+}
+
+/* Individual "you" items */
+.you1, .you2, .you3, .you4, .you5,
+.you6, .you7, .you8, .you9, .you10,
+.you11, .you12, .you13, .you14, .you15 {
+  list-style: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Hover effects — stable center */
+.you1:hover, .you2:hover, .you3:hover, .you4:hover, .you5:hover,
+.you6:hover, .you7:hover, .you8:hover, .you9:hover, .you10:hover,
+.you11:hover, .you12:hover, .you13:hover, .you14:hover, .you15:hover {
+  color: #ddb0e6;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #ddb0e6;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Floating Images */
+.img1, .img2, .img3, .xyjah {
+  padding: 15px;
+  border-radius: 100px;
+  border-bottom: #9b82b6;
+  width: 300px;
+  transition: transform 350ms cubic-bezier(.2,.9,.2,1), box-shadow 350ms;
+  animation: float 5s ease-in-out infinite;
+}
+
+
+/* Text below the title */
+.love1 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 0px;
+  transition: all 0.4s ease;
+  top: 0;
+}
+
+/* "Things I love about you:" title */
+.love2 {
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  transition: all 0.4s ease;
+}
+
+.love2:hover {
+  color: #ddb0e6;
+  font-size: 30px;
+  margin: 1px;
+}
+
+.xyjah {
+  display: block;
+  margin: 0 auto;
+  width: 80%;      /* makes it take 80% of the container width */
+  max-width: 700px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .love-list {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
